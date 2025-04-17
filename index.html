@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productivity Tool</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="background-container">
+    <iframe id="bg-video" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src=""></iframe>
+    <img id="bg-image" src="" alt="Background Image" />
+  </div>
+
+  <div id="top-bar">
+    <div id="galleons">🪙 0</div>
+    <button id="toggle-settings">Settings</button>
+  </div>
+
+  <div id="controls" class="panel hidden">
+    <label for="video-link">YouTube Video URL:</label>
+    <input type="text" id="video-link" placeholder="youtube.com/watch?v=...">
+    <button id="set-video">Set Background</button><br><br>
+
+    <label for="image-upload">Upload Background Image:</label>
+    <input type="file" id="image-upload" accept="image/*"><br><br>
+
+    <label for="font-select">Select Font:</label>
+    <select id="font-select">
+      <option value="Arial">Arial</option>
+      <option value="Courier New">Courier New</option>
+      <option value="Georgia">Georgia</option>
+      <option value="Tahoma">Tahoma</option>
+      <option value="Verdana">Verdana</option>
+    </select><br><br>
+
+    <label><input type="checkbox" id="toggle-audio" unchecked> Enable Sound</label>
+  </div>
+
+  <div class="center-box">
+    <div id="timer">25:00</div>
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <div>
+      <button id="start-btn">Start</button>
+      <button id="reset-btn">Reset</button>
+    </div>
+  </div>
+
+  <div id="bottom-right">
+    <button id="toggle-map">Map</button>
+    <button id="toggle-shop">Shop</button>
+  </div>
+
+  <div id="map" class="panel hidden">
+    <canvas id="train-map" width="300" height="300"></canvas>
+  </div>
+
+  <div id="shop" class="panel hidden">
+    <h3>Shop</h3>
+    <button class="buy" data-cost="5">💎 Jewel (5 Galleons)</button>
+    <button class="buy" data-cost="10">🔷 Diamond (10 Galleons)</button>
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
